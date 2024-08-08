@@ -1,6 +1,12 @@
-/*
-! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
-*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ubuntu font */
+
+/* Poppins font */
+
+/* ! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -446,7 +452,7 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -500,7 +506,7 @@ video {
   --tw-contain-style:  ;
 }
 
-::backdrop {
+::backdrop{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -554,94 +560,172 @@ video {
   --tw-contain-style:  ;
 }
 
-.container {
+.container{
   width: 100%;
 }
 
-@media (min-width: 640px) {
-  .container {
+@media (min-width: 640px){
+  .container{
     max-width: 640px;
   }
 }
 
-@media (min-width: 768px) {
-  .container {
+@media (min-width: 768px){
+  .container{
     max-width: 768px;
   }
 }
 
-@media (min-width: 1024px) {
-  .container {
+@media (min-width: 1024px){
+  .container{
     max-width: 1024px;
   }
 }
 
-@media (min-width: 1280px) {
-  .container {
+@media (min-width: 1280px){
+  .container{
     max-width: 1280px;
   }
 }
 
-@media (min-width: 1536px) {
-  .container {
+@media (min-width: 1536px){
+  .container{
     max-width: 1536px;
   }
 }
 
-.visible {
+.visible{
   visibility: visible;
 }
 
-.static {
+.invisible{
+  visibility: hidden;
+}
+
+.collapse{
+  visibility: collapse;
+}
+
+.static{
   position: static;
 }
 
-.fixed {
+.fixed{
   position: fixed;
 }
 
-.relative {
+.absolute{
+  position: absolute;
+}
+
+.relative{
   position: relative;
 }
 
-.m-2 {
+.m-2{
   margin: 0.5rem;
 }
 
-.block {
+.block{
   display: block;
 }
 
-.inline {
+.inline{
   display: inline;
 }
 
-.table {
+.flex{
+  display: flex;
+}
+
+.table{
   display: table;
 }
 
-.contents {
+.contents{
   display: contents;
 }
 
-.transform {
+.hidden{
+  display: none;
+}
+
+.transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.rounded {
+.flex-col{
+  flex-direction: column;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.gap-8{
+  gap: 2rem;
+}
+
+.gap-9{
+  gap: 2.25rem;
+}
+
+.rounded{
   border-radius: 0.25rem;
 }
 
-.ordinal {
+.border{
+  border-width: 1px;
+}
+
+.py-14{
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.pl-8{
+  padding-left: 2rem;
+}
+
+.pt-5{
+  padding-top: 1.25rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.lowercase{
+  text-transform: lowercase;
+}
+
+.ordinal{
   --tw-ordinal: ordinal;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
-.filter {
+.filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.transition {
+.transition{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
@@ -650,5 +734,61 @@ video {
 }
 
 :root{
-  --main-: #5431b6;
+  /* dark mode colors */
+  --text-dark: #F0EFEB;
+  --background-dark: #060504;
+  --primary-dark: #B88100;
+  --secondary-dark: #3A434B;
+  --accent-dark: #5B5068;
+  /* light mode colors */
+  --text-light: #14130F;
+  --background-light: #FBFAF9;
+  --primary-light: #FFC847;
+  --secondary-light: #B4BDC5;
+  --accent-light: #A297AF;
+}
+
+body{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  color: var(--text-dark);
+}
+
+h1{
+  color: #14130F;
+}
+
+#banner{
+  background-image: url(/images/pennyWiseBanner.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+#auth{
+  background-color: var(--background-dark);
+}
+
+.submit{
+  background-color: #14130F;
+}
+
+.switch{
+  background-color: var(--primary-dark);
+}
+
+#btn-wrapper button{
+  padding: 15px 25px;
+  border-radius: 12px;
+}
+
+#input-wrapper input{
+  background-color: var(--secondary-dark);
+  border-radius: 15px;
+  padding: 15px 20px;
+}
+
+#forgot-password span{
+  color: var(--primary-dark);
 }

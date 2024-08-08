@@ -1,17 +1,56 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/src/output.css">
+  <script defer src="bundled.js"></script>
   <title>PennyWise</title>
 </head>
-<body>
-  <nav>
-    <div class="navbar">
-      <h5>PennyWise</h5>
-    </div>
-  </nav>
-  <script src="bundled.js"></script>
+<body class="">
+  <div id="banner">
+    <h1 class="font-bold text-2xl pl-8 pt-5">PennyWise</h1>
+  </div>
+
+    <form id="auth" class="flex flex-col ">
+
+      <h2 class="py-14 text-center text-2xl">Sign up</h2>
+
+      <div id="input-wrapper" class="flex flex-col items-center gap-9"> 
+        <div id="">
+          <input type="text" required name="first-name" id="name" placeholder="Name">
+        </div>
+
+        <div class="">
+          <input type="email" required name="email" id="email" placeholder="email@example.com">
+        </div>
+
+        <div class="">
+          <input type="password" required name="password" placeholder="Password" minlength="6" maxlength="20">
+        </div>
+      </div>
+
+      <p id="forgot-password" class="text-center pt-5">
+        Forgot Password?
+        <span>click here</span>
+      </p>
+
+      <div id="btn-wrapper" class="flex justify-center gap-8 pt-5 ">
+        <a href="./blank.html">
+          <button id="sign-in" type="submit" class="submit">
+            Sign in
+          </button>
+        </a>
+
+        <a href="./blank.html">
+          <button id="sign-up" class="switch">
+            Sign up
+          </button>
+        </a>
+      </div>
+
+    </form>
+  </div>
+
 </body>
 </html>

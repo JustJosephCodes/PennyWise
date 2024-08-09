@@ -1,7 +1,28 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import "dotenv/config";
+console.log(process.env);
+
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, onSnapshot, addDoc, deleteDoc, doc, query, where, orderBy, serverTimestamp, getDoc, updateDoc} from "firebase/firestore";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getFirestore,
+  collection
+  // ,onSnapshot,
+  // addDoc,
+  // deleteDoc,
+  // doc,
+  // query,
+  // where,
+  // orderBy,
+  // serverTimestamp,
+  // getDoc,
+  // updateDoc,
+} from "firebase/firestore";
+
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyBDS3I7JronhlZIVeLzecxiG2mukkLjdY4",
@@ -13,33 +34,54 @@ const firebaseConfig = {
   measurementId: "G-JKYX0WKXFP",
 };
 
+
 //init firebase
-initializeApp(firebaseConfig)
+initializeApp(firebaseConfig);
 
 //init services
 const db = getFirestore();
-const auth = getAuth()
+const auth = getAuth();
 
 //colref
-const colref = collection(db, `Log-in's`)
+const colref = collection(db, "expenses");
 
-// authentication 
+// authentication begins
+
+const form = document.querySelector("#auth");
+const signIn = document.querySelector("#sign-in");
 
 //signing users up
-const form = document.querySelector("#auth-form")
-form.addEventListener('submit', (e)=>{
-  e.preventDefault()
+const signUp = document.querySelector("#sign-up");
+
+signUp.addEventListener("click", (e) => {
+  e.preventDefault();
+
   let email = document.querySelector("#email");
   let password = document.querySelector("#password");
-  email = email.value 
-  password = password.value
-  
+  email = email.value;
+  password = password.value;
+
   createUserWithEmailAndPassword(auth, email, password)
-    .then((cred)=>{
-      console.log(`user is`,cred.user);
-      form.reset()
+    .then((cred) => {
+      form.reset();
+      console.log("successfully signed in");
+      window.location.href = `blank.html`;
     })
-    .catch((err)=>{
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+// logging in
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      console.log("successfully signed in");
+      window.location.href = `blank.html`;
+    })
+    .catch((err) => {
       console.error(err);
-    })
-} )
+    });
+});

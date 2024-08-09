@@ -7,14 +7,16 @@
   <script defer src="bundled.js"></script>
   <title>PennyWise</title>
 </head>
-<body class="">
+<body >
   <div id="banner">
     <h1 class="font-bold text-2xl pl-8 pt-5">PennyWise</h1>
   </div>
 
     <form id="auth" class="flex flex-col ">
-
-      <h2 class="py-14 text-center text-2xl">Sign up</h2>
+      <h1 class="sm:font-bold text-2xl pl-8 pt-5">PennyWise</h1>
+      <h2 class="py-14 text-center  text-2xl">Welcome</h2>
+      
+      <div id="glass">
 
       <div id="input-wrapper" class="flex flex-col items-center gap-9"> 
         <div id="">
@@ -26,28 +28,33 @@
         </div>
 
         <div class="">
-          <input type="password" required name="password" placeholder="Password" minlength="6" maxlength="20">
+          <input type="password" required name="password" placeholder="Password" minlength="6" maxlength="20" id="password">
         </div>
       </div>
 
       <p id="forgot-password" class="text-center pt-5">
         Forgot Password?
-        <span>click here</span>
+        <span><a href="./blank.html">click here</a></span>
       </p>
 
       <div id="btn-wrapper" class="flex justify-center gap-8 pt-5 ">
+        
         <a href="./blank.html">
-          <button id="sign-in" type="submit" class="submit">
-            Sign in
-          </button>
+        <button id="sign-in" type="" class="" type="submit">
+        Sign in
+        </button>
         </a>
 
         <a href="./blank.html">
-          <button id="sign-up" class="switch">
+          <button id="sign-up" class="" >
             Sign up
           </button>
         </a>
+
       </div>
+      </div>
+
+
 
     </form>
   </div>

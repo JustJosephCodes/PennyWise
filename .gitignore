@@ -1,4 +1,4 @@
 node_modules
-git 
-tailwind.config.js
-/webpack.config.js
+*.config.js
+*.json
+.env
